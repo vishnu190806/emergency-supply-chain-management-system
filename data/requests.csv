@@ -1,0 +1,5 @@
+id,supply_type,quantity,timestamp,expiry_date,distance_km,destination
+R1,Medical Kit,5,2025-08-20T10:00:00,2025-08-21T12:00:00,2.0,CampA
+R2,Water,20,,2025-08-22T00:00:00,10.0,CampB
+R3,Food,50,2025-08-20T09:30:00,2025-09-01T00:00:00,15.0,CampC
+R4,Blanket,30,2025-08-19T08:00:00,,3.0,CampD

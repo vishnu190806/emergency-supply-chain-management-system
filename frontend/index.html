@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESCM | Priority Delivery Console</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-orbit"></div>
+    <div class="bg-orbit bg-orbit-2"></div>
+
+    <div class="console-shell">
+      <header class="console-header">
+        <div class="brand">
+          <div class="brand-logo">
+            <span class="brand-dot"></span>
+          </div>
+          <div>
+            <h1>ESCM Delivery Console</h1>
+            <p>Smart priority queue for disaster relief supplies</p>
+          </div>
+        </div>
+        <div class="status-cluster">
+          <span class="status-pill">
+            <span class="status-dot"></span>
+            API online
+          </span>
+          <span class="status-chip">http://127.0.0.1:8000</span>
+        </div>
+      </header>
+
+      <main class="console-main">
+        <!-- Left: request composer -->
+        <section class="panel panel-left">
+          <div class="panel-header">
+            <div>
+              <h2>Compose request</h2>
+              <p>Higher priority items are dispatched earlier than FIFO.</p>
+            </div>
+          </div>
+
+          <form id="reqForm" class="form-grid">
+            <!-- Row 1 -->
+            <label class="field">
+              <span class="field-label">Request ID</span>
+              <input id="id" placeholder="R-2025-001" required />
+            </label>
+
+            <label class="field">
+              <span class="field-label">Supply type</span>
+              <select id="supply_type" required>
+                <option value="Medical Kit">Medical Kit</option>
+                <option value="Water">Water</option>
+                <option value="Food">Food</option>
+                <option value="Blanket">Blanket</option>
+                <option value="Tarpaulin">Tarpaulin</option>
+              </select>
+            </label>
+
+            <!-- Row 2 -->
+            <label class="field">
+              <span class="field-label">Quantity</span>
+              <input id="quantity" type="number" min="1" value="10" required />
+            </label>
+
+            <label class="field">
+              <span class="field-label">Expiry date (optional)</span>
+              <div class="date-wrapper">
+                <input id="expiry_date" type="datetime-local" />
+                <button
+                  type="button"
+                  class="date-btn"
+                  onclick="document.getElementById('expiry_date').showPicker && document.getElementById('expiry_date').showPicker()"
+                >
+                  📅
+                </button>
+              </div>
+            </label>
+
+            <!-- Row 3 -->
+            <label class="field">
+              <span class="field-label">Distance (km)</span>
+              <input
+                id="distance_km"
+                type="number"
+                step="0.1"
+                placeholder="5"
+              />
+            </label>
+
+            <label class="field">
+              <span class="field-label">Destination camp</span>
+              <input id="destination" placeholder="Camp A" />
+            </label>
+
+            <div class="form-actions">
+              <button type="submit" class="btn primary">Enqueue request</button>
+            </div>
+          </form>
+
+          <div class="hint">
+            <h3>Priority logic</h3>
+            <ul>
+              <li>Medical kits and expiring items get boosted.</li>
+              <li>Waiting time and shorter distance also increase priority.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Right: live queue -->
+        <section class="panel panel-right">
+          <div class="panel-header">
+            <div>
+              <h2>Live queue</h2>
+              <p>Requests ordered by computed priority, not arrival time.</p>
+            </div>
+            <div class="toolbar">
+              <button type="button" id="refreshBtn" class="btn ghost">
+                Refresh
+              </button>
+              <button type="button" id="dispatchBtn" class="btn danger">
+                Dispatch next
+              </button>
+            </div>
+          </div>
+
+          <div class="queue-meta">
+            <span id="queueSize" class="queue-size">0 items in queue</span>
+          </div>
+
+          <div class="table-shell">
+            <table id="queueTable">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Type</th>
+                  <th>Destination</th>
+                  <th>Priority</th>
+                  <th>Enqueued at</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="5" class="empty">
+                    No requests yet. Enqueue one on the left.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <pre id="output" class="log-panel">Ready.</pre>
+
+          <div class="stats-bar">
+            <div class="stat">
+              <span class="stat-label">Total dispatched</span>
+              <span id="statDispatched" class="stat-value">0</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Drivers active</span>
+              <span class="stat-value">5</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Queue mode</span>
+              <span class="stat-value">Priority-based</span>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Bottom row explaining scores -->
+      <section class="priority-row">
+        <div class="priority-card">
+          <h3>Supply priority scores</h3>
+          <p class="priority-caption">
+            Higher score → closer to the top of the queue.
+          </p>
+          <div class="priority-grid">
+            <div class="priority-item">
+              <span class="priority-label">Medical Kit</span>
+              <span class="priority-score high">10</span>
+              <span class="priority-note">Critical, life‑saving</span>
+            </div>
+            <div class="priority-item">
+              <span class="priority-label">Water</span>
+              <span class="priority-score high">6</span>
+              <span class="priority-note">High urgency</span>
+            </div>
+            <div class="priority-item">
+              <span class="priority-label">Food</span>
+              <span class="priority-score mid">4</span>
+              <span class="priority-note">Important</span>
+            </div>
+            <div class="priority-item">
+              <span class="priority-label">Blanket</span>
+              <span class="priority-score low">2</span>
+              <span class="priority-note">Comfort / shelter</span>
+            </div>
+            <div class="priority-item">
+              <span class="priority-label">Tarpaulin</span>
+              <span class="priority-score low">1</span>
+              <span class="priority-note">Low baseline</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="priority-card">
+          <h3>Dynamic boosts</h3>
+          <ul class="priority-list">
+            <li>
+              <strong>Expiry boost</strong>: +2 if expiring in ≤2 days, +1 if ≤7
+              days.
+            </li>
+            <li><strong>Wait boost</strong>: +1 per hour waited (max +6).</li>
+            <li>
+              <strong>Distance boost</strong>: +0.5 for ≤5 km, +0.2 for ≤20 km.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

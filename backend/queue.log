@@ -1,0 +1,39 @@
+2025-08-27 13:18:43,447 INFO ENQUEUE id=R1 type=Medical Kit priority=16.5 ts=2025-08-20T10:00:00 dest=CampA
+2025-08-27 13:18:43,449 INFO ENQUEUE id=R2 type=Water priority=6.2 ts=2025-08-27T07:48:43.448869 dest=CampB
+2025-08-27 13:18:43,451 INFO ENQUEUE id=R3 type=Food priority=11.2 ts=2025-08-20T09:30:00 dest=CampC
+2025-08-27 13:18:43,454 INFO ENQUEUE id=R4 type=Blanket priority=8.5 ts=2025-08-19T08:00:00 dest=CampD
+2025-08-27 13:25:04,496 INFO ENQUEUE id=R1 type=Medical Kit priority=16.5 ts=2025-08-20T10:00:00 dest=CampA
+2025-08-27 13:25:04,587 INFO ENQUEUE id=R3 type=Food priority=11.2 ts=2025-08-20T09:30:00 dest=CampC
+2025-08-27 13:25:04,590 INFO ENQUEUE id=R4 type=Blanket priority=8.5 ts=2025-08-19T08:00:00 dest=CampD
+2025-08-27 13:32:43,542 INFO ENQUEUE id=R1 type=Medical Kit priority=16.5 ts=2025-08-20T10:00:00+00:00 dest=CampA
+2025-08-27 13:32:43,544 INFO ENQUEUE id=R2 type=Water priority=6.2 ts=2025-08-27T08:02:43.543601+00:00 dest=CampB
+2025-08-27 13:32:43,546 INFO ENQUEUE id=R3 type=Food priority=11.2 ts=2025-08-20T09:30:00+00:00 dest=CampC2025-10-01 17:34:56,117 INFO ENQUEUE id=REQ-001 type=Medical Kit priority=10.5 ts=2025-10-01T12:04:56.113000+00:00 dest=City Hospital
+2025-10-01 17:35:24,699 INFO ENQUEUE id=REQ-002 type=Water priority=7.2 ts=2025-10-01T12:05:24.698000+00:00 dest=Camp A
+2025-10-01 17:35:59,147 INFO ENQUEUE id=REQ-003 type=Tarpaulin priority=1.5 ts=2025-10-01T12:05:59.146000+00:00 dest=Camp B
+2025-10-01 17:36:17,639 INFO POP id=REQ-001 type=Medical Kit priority=10.5 ts=2025-10-01T12:04:56.113000+00:00 dest=City Hospital
+2025-10-01 17:36:27,218 INFO POP id=REQ-002 type=Water priority=7.2 ts=2025-10-01T12:05:24.698000+00:00 dest=Camp A
+2025-10-01 17:36:39,765 INFO POP id=REQ-003 type=Tarpaulin priority=1.5 ts=2025-10-01T12:05:59.146000+00:00 dest=Camp B
+2025-10-01 17:43:25,414 INFO ENQUEUE id=REQ-001 type=Medical Kit priority=10.5 ts=2025-10-01T12:13:25.410000+00:00 dest=City Hospital
+2025-10-01 17:43:49,764 INFO ENQUEUE id=REQ-002 type=Medical Kit priority=11.2 ts=2025-10-01T12:13:49.762000+00:00 dest=Camp A
+2025-10-01 17:44:23,476 INFO ENQUEUE id=REQ-003 type=Food priority=5.2 ts=2025-10-01T12:14:23.473000+00:00 dest=Camp B
+2025-10-01 17:46:48,700 INFO POP id=REQ-002 type=Medical Kit priority=11.2 ts=2025-10-01T12:13:49.762000+00:00 dest=Camp A
+2025-10-01 17:46:49,858 INFO POP id=REQ-001 type=Medical Kit priority=10.5 ts=2025-10-01T12:13:25.410000+00:00 dest=City Hospital
+2025-10-01 17:46:51,361 INFO POP id=REQ-003 type=Food priority=5.2 ts=2025-10-01T12:14:23.473000+00:00 dest=Camp B
+2025-12-26 20:02:14,626 INFO ENQUEUE id=101 type=food priority=4.2 ts=2025-12-26T14:32:14.617000+00:00 dest=City A
+2025-12-26 20:02:34,431 INFO POP id=101 type=food priority=4.2 ts=2025-12-26T14:32:14.617000+00:00 dest=City A
+2025-12-26 20:06:53,743 INFO ENQUEUE id=REQ-001 type=Medical Kit priority=11.2 ts=2025-12-26T14:36:53.426000+00:00 dest=City Hospital
+2025-12-26 20:07:24,531 INFO ENQUEUE id=REQ-002 type=Food priority=4.5 ts=2025-12-26T14:37:24.528000+00:00 dest=City A
+2025-12-26 20:07:31,894 INFO POP id=REQ-001 type=Medical Kit priority=11.2 ts=2025-12-26T14:36:53.426000+00:00 dest=City Hospital
+2025-12-26 20:07:36,510 INFO POP id=REQ-002 type=Food priority=4.5 ts=2025-12-26T14:37:24.528000+00:00 dest=City A
+2025-12-26 20:29:19,407 INFO ENQUEUE id=REQ-001 type=Medical Kit priority=11.2 ts=2025-12-26T14:59:19.091000+00:00 dest=City Hospital
+2025-12-26 20:29:32,221 INFO POP id=REQ-001 type=Medical Kit priority=11.2 ts=2025-12-26T14:59:19.091000+00:00 dest=City Hospital
+2025-12-26 20:30:19,732 INFO ENQUEUE id=REQ-001 type=Medical Kit priority=11.2 ts=2025-12-26T15:00:19.730000+00:00 dest=City Hospital
+2025-12-26 20:30:41,092 INFO ENQUEUE id=REQ-001 type=Food priority=4.2 ts=2025-12-26T15:00:40.787000+00:00 dest=City A
+2025-12-26 20:30:44,670 INFO POP id=REQ-001 type=Medical Kit priority=11.2 ts=2025-12-26T15:00:19.730000+00:00 dest=City Hospital
+2025-12-26 20:30:45,933 INFO POP id=REQ-001 type=Food priority=4.2 ts=2025-12-26T15:00:40.787000+00:00 dest=City A
+2025-12-26 21:16:44,235 INFO ENQUEUE id=REQ-001 type=Medical Kit priority=11.2 ts=2025-12-26T15:46:44.228000+00:00 dest=City Hospital
+2025-12-26 21:18:37,670 INFO POP id=REQ-001 type=Medical Kit priority=11.2 ts=2025-12-26T15:46:44.228000+00:00 dest=City Hospital
+2025-12-26 21:18:57,559 INFO ENQUEUE id=REQ-002 type=Water priority=8.5 ts=2025-12-26T15:48:57.555000+00:00 dest=Camp A
+2025-12-26 21:19:19,229 INFO ENQUEUE id=REQ-003 type=Medical Kit priority=11.2 ts=2025-12-26T15:49:18.917000+00:00 dest=Camp B
+2025-12-26 21:19:25,086 INFO POP id=REQ-003 type=Medical Kit priority=11.2 ts=2025-12-26T15:49:18.917000+00:00 dest=Camp B
+2025-12-26 21:19:26,999 INFO POP id=REQ-002 type=Water priority=8.5 ts=2025-12-26T15:48:57.555000+00:00 dest=Camp A

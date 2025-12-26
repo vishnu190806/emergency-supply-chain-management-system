@@ -1,0 +1,25 @@
+2025-12-26 21:34:38,649 INFO ENQUEUE id=LOW type=Blanket priority=8.2 ts=2025-01-01T12:00:00+00:00 dest=None
+2025-12-26 21:34:38,649 INFO ENQUEUE id=HIGH type=Medical Kit priority=16.2 ts=2025-01-01T12:00:00+00:00 dest=None
+2025-12-26 21:34:38,649 INFO POP id=HIGH type=Medical Kit priority=16.2 ts=2025-01-01T12:00:00+00:00 dest=None
+2025-12-26 21:36:22,397 INFO ENQUEUE id=LOW type=Blanket priority=8.2 ts=2025-01-01T12:00:00+00:00 dest=None
+2025-12-26 21:36:22,398 INFO ENQUEUE id=HIGH type=Medical Kit priority=16.2 ts=2025-01-01T12:00:00+00:00 dest=None
+2025-12-26 21:36:22,398 INFO POP id=HIGH type=Medical Kit priority=16.2 ts=2025-01-01T12:00:00+00:00 dest=None
+2025-12-26 21:43:29,579 INFO ENQUEUE id=T1 type=Medical Kit priority=16.5 ts=2025-01-01T12:00:00+00:00 dest=Test Camp
+2025-12-26 21:43:29,588 INFO ENQUEUE id=T2 type=Food priority=4.2 ts=2025-12-26T16:13:29.587263+00:00 dest=Test Camp 2
+2025-12-26 21:43:29,591 INFO POP id=T1 type=Medical Kit priority=16.5 ts=2025-01-01T12:00:00+00:00 dest=Test Camp
+2025-12-26 21:43:29,623 INFO ENQUEUE id=LOW type=Blanket priority=8.2 ts=2025-01-01T12:00:00+00:00 dest=None
+2025-12-26 21:43:29,623 INFO ENQUEUE id=HIGH type=Medical Kit priority=16.2 ts=2025-01-01T12:00:00+00:00 dest=None
+2025-12-26 21:43:29,623 INFO POP id=HIGH type=Medical Kit priority=16.2 ts=2025-01-01T12:00:00+00:00 dest=None
+2025-12-26 21:44:59,689 INFO ENQUEUE id=T1 type=Medical Kit priority=16.5 ts=2025-01-01T12:00:00+00:00 dest=Test Camp
+2025-12-26 21:44:59,698 INFO ENQUEUE id=T2 type=Food priority=4.2 ts=2025-12-26T16:14:59.696019+00:00 dest=Test Camp 2
+2025-12-26 21:44:59,700 INFO POP id=T1 type=Medical Kit priority=16.5 ts=2025-01-01T12:00:00+00:00 dest=Test Camp
+2025-12-26 21:44:59,718 INFO ENQUEUE id=LOW type=Blanket priority=8.2 ts=2025-01-01T12:00:00+00:00 dest=None
+2025-12-26 21:44:59,718 INFO ENQUEUE id=HIGH type=Medical Kit priority=16.2 ts=2025-01-01T12:00:00+00:00 dest=None
+2025-12-26 21:44:59,718 INFO POP id=HIGH type=Medical Kit priority=16.2 ts=2025-01-01T12:00:00+00:00 dest=None
+2025-12-26 21:50:05,004 INFO ENQUEUE id=T1 type=Medical Kit priority=16.5 ts=2025-01-01T12:00:00+00:00 dest=Test Camp
+2025-12-26 21:50:05,014 INFO ENQUEUE id=T2 type=Food priority=4.2 ts=2025-12-26T16:20:05.012042+00:00 dest=Test Camp 2
+2025-12-26 21:50:05,016 INFO POP id=T1 type=Medical Kit priority=16.5 ts=2025-01-01T12:00:00+00:00 dest=Test Camp
+2025-12-26 21:50:05,023 INFO POP id=T2 type=Food priority=4.2 ts=2025-12-26T16:20:05.012042+00:00 dest=Test Camp 2
+2025-12-26 21:50:05,937 INFO ENQUEUE id=LOW type=Blanket priority=8.2 ts=2025-01-01T12:00:00+00:00 dest=None
+2025-12-26 21:50:05,937 INFO ENQUEUE id=HIGH type=Medical Kit priority=16.2 ts=2025-01-01T12:00:00+00:00 dest=None
+2025-12-26 21:50:05,937 INFO POP id=HIGH type=Medical Kit priority=16.2 ts=2025-01-01T12:00:00+00:00 dest=None
